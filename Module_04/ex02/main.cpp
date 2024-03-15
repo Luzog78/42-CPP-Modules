@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 14:57:14 by ysabik            #+#    #+#             */
-/*   Updated: 2024/02/22 10:01:35 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/15 09:43:18 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,20 @@
 #include "Cat.hpp"
 #include "WrongCat.hpp"
 
-void	print_ideas(Animal *animal, int n_ideas = 3)
-{
+void	print_ideas(Dog *giraffe, Cat *eagle, int n_ideas = 3) {
 	for (int i = 0; i < n_ideas; i++)
-		std::cout	<< "(" << animal->getType() << ")  "
+		std::cout	<< "(" << giraffe->getType() << ")  "
 					<< "Idea " << i << ": |"
-					<< animal->getBrain()->getIdea(i) << "|"
+					<< giraffe->getBrain()->getIdea(i) << "|"
+					<< std::endl;
+	for (int i = 0; i < n_ideas; i++)
+		std::cout	<< "(" << eagle->getType() << ")  "
+					<< "Idea " << i << ": |"
+					<< eagle->getBrain()->getIdea(i) << "|"
 					<< std::endl;
 }
 
-int	main(void)
-{
+int	main(void) {
 	Animal	*animals[10];
 	
 	for (int i = 0; i < 5; i++)
@@ -42,15 +45,14 @@ int	main(void)
 
 	std::cout << std::endl;
 
-	Animal	*giraffe = new Dog();
-	Animal	*eagle = new Cat();
+	Dog	*giraffe = new Dog();
+	Cat	*eagle = new Cat();
 
 	eagle->getBrain()->setIdea(0, "I'm a bird");
 	eagle->getBrain()->setIdea(1, "I'm a predator");
 	eagle->getBrain()->setIdea(2, "I'm a hunter");
 
-	print_ideas(giraffe);
-	print_ideas(eagle);
+	print_ideas(giraffe, eagle);
 	
 	std::cout	<< "---------" << std::endl
 				<< "Copying the " << eagle->getType()
@@ -59,8 +61,7 @@ int	main(void)
 	giraffe->setBrain(new Brain(*eagle->getBrain()));
 	std::cout	<< "---------" << std::endl;
 
-	print_ideas(giraffe);
-	print_ideas(eagle);
+	print_ideas(giraffe, eagle);
 
 	delete giraffe;
 	delete eagle;

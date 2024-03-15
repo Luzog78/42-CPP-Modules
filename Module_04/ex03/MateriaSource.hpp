@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 10:27:38 by ysabik            #+#    #+#             */
-/*   Updated: 2024/02/22 10:27:55 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/15 09:50:04 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 # include "include.hpp"
 # include "IMateriaSource.hpp"
 
-class MateriaSource : public IMateriaSource
-{
+class MateriaSource : public IMateriaSource {
 	private:
 		AMateria	*source[SOURCE_SIZE];
 		int			count;

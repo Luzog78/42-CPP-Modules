@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 14:57:04 by ysabik            #+#    #+#             */
-/*   Updated: 2024/02/20 17:40:17 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/15 08:46:47 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@
 # define YELLOW "\033[0;33m"
 # define RESET "\033[0m"
 
-class Animal
-{
+class Animal {
 	protected:
 		std::string type;
 

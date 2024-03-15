@@ -6,19 +6,19 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 14:57:02 by ysabik            #+#    #+#             */
-/*   Updated: 2024/02/20 19:06:30 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/15 09:35:48 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal() : type("CommonAnimal"), brain(new Brain()) {
+Animal::Animal() : type("CommonAnimal") {
 	std::cout	<< GREEN
 				<< "(Animal)  " << this->type << " is born !"
 				<< RESET << std::endl;
 }
 
-Animal::Animal(std::string type) : type(type), brain(new Brain()) {
+Animal::Animal(std::string type) : type(type) {
 	std::cout	<< GREEN
 				<< "(Animal)  " << this->type << " is born !"
 				<< RESET << std::endl;
@@ -35,16 +35,11 @@ Animal::~Animal() {
 	std::cout	<< RED
 				<< "(Animal)  " << this->type << " is destroyed..."
 				<< RESET << std::endl;
-	delete this->brain;
 }
 
 Animal	&Animal::operator=(Animal const &rhs) {
 	if (this != &rhs)
-	{
 		this->type = rhs.type;
-		delete this->brain;
-		this->brain = new Brain(*rhs.brain);
-	}
 	return *this;
 }
 
@@ -55,13 +50,4 @@ std::string	Animal::getType() const {
 void	Animal::makeSound() const {
 	std::cout	<< "(Animal)  " << this->type << ": "
 				<< "* Little shy noise *" << std::endl;
-}
-
-Brain	*Animal::getBrain() const {
-	return this->brain;
-}
-
-void	Animal::setBrain(Brain *brain) {
-	delete this->brain;
-	this->brain = brain;
 }

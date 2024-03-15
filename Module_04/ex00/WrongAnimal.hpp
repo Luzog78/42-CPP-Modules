@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 13:13:39 by ysabik            #+#    #+#             */
-/*   Updated: 2024/02/20 17:40:17 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/15 08:56:12 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 # include "Animal.hpp"
 
-class WrongAnimal
-{
+class WrongAnimal {
 	protected:
 		std::string	type;
 

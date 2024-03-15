@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 14:57:08 by ysabik            #+#    #+#             */
-/*   Updated: 2024/02/20 13:21:09 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/15 09:38:49 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 
 # include "Animal.hpp"
 
-class Cat : public Animal
-{
+class Cat : public Animal {
+	private:
+		Brain	*brain;
+
 	public:
 		Cat();
 		Cat(Cat const &src);
@@ -25,6 +27,8 @@ class Cat : public Animal
 		Cat	&operator=(Cat const &rhs);
 
 		void	makeSound() const;
+		Brain	*getBrain() const;
+		void	setBrain(Brain *brain);
 };
 
 #endif

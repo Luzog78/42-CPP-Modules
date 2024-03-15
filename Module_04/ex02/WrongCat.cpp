@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 13:22:33 by ysabik            #+#    #+#             */
-/*   Updated: 2024/02/20 17:50:48 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/15 08:55:53 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ WrongCat	&WrongCat::operator=(WrongCat const &rhs) {
 	return *this;
 }
 
-// void	WrongCat::makeSound() const {
-// 	std::cout	<< "(WrongCat)     " << this->type << ": "
-// 				<< "* MOOOOWWW *" << std::endl;
-// }
+void	WrongCat::makeSound() const {
+	std::cout	<< "(WrongCat)     " << this->type << ": "
+				<< "* MOOOOWWW *" << std::endl;
+}

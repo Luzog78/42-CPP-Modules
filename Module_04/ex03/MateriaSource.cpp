@@ -6,14 +6,13 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 10:28:50 by ysabik            #+#    #+#             */
-/*   Updated: 2024/02/22 11:01:23 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/15 09:50:31 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
 
-MateriaSource::MateriaSource()
-{
+MateriaSource::MateriaSource() {
 	std::cout	<< GREEN << ALIGN("(MateriaSource)")
 				<< "MateriaSource is created !"
 				<< RESET << std::endl;
@@ -22,16 +21,14 @@ MateriaSource::MateriaSource()
 	this->count = 0;
 }
 
-MateriaSource::MateriaSource(MateriaSource const &src)
-{
+MateriaSource::MateriaSource(MateriaSource const &src) {
 	std::cout	<< YELLOW << ALIGN("(MateriaSource)")
 				<< "MateriaSource is created !"
 				<< RESET << std::endl;
 	*this = src;
 }
 
-MateriaSource::~MateriaSource()
-{
+MateriaSource::~MateriaSource() {
 	std::cout	<< RED << ALIGN("(MateriaSource)")
 				<< "MateriaSource is destroyed..."
 				<< RESET << std::endl;
@@ -39,10 +36,8 @@ MateriaSource::~MateriaSource()
 		delete this->source[i];
 }
 
-MateriaSource	&MateriaSource::operator=(MateriaSource const &rhs)
-{
-	if (this != &rhs)
-	{
+MateriaSource	&MateriaSource::operator=(MateriaSource const &rhs) {
+	if (this != &rhs) {
 		for (int i = 0; i < this->count; i++)
 			delete this->source[i];
 		for (int i = 0; i < SOURCE_SIZE; i++)
@@ -52,17 +47,14 @@ MateriaSource	&MateriaSource::operator=(MateriaSource const &rhs)
 	return *this;
 }
 
-void	MateriaSource::learnMateria(AMateria *m)
-{
-	if (this->count < SOURCE_SIZE)
-	{
+void	MateriaSource::learnMateria(AMateria *m) {
+	if (this->count < SOURCE_SIZE) 	{
 		this->source[this->count] = m->clone();
 		this->count++;
 	}
 }
 
-AMateria	*MateriaSource::createMateria(std::string const &type)
-{
+AMateria	*MateriaSource::createMateria(std::string const &type) {
 	for (int i = 0; i < this->count; i++)
 		if (this->source[i]->getType() == type)
 			return this->source[i]->clone();

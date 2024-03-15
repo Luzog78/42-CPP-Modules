@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 10:04:24 by ysabik            #+#    #+#             */
-/*   Updated: 2024/02/22 10:41:55 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/15 09:52:02 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 # include "include.hpp"
 # include "ICharacter.hpp"
 
-class AMateria
-{
+class AMateria {
 	protected:
 		std::string		type;
 

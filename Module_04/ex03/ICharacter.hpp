@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 10:17:21 by ysabik            #+#    #+#             */
-/*   Updated: 2024/02/22 10:44:48 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/15 09:50:45 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@
 
 class AMateria;
 
-class ICharacter
-{
+class ICharacter {
 	public:
 		virtual ~ICharacter() {}
 

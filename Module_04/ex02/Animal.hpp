@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 14:57:04 by ysabik            #+#    #+#             */
-/*   Updated: 2024/02/20 19:26:17 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/15 09:43:55 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@
 # include "include.hpp"
 # include "Brain.hpp"
 
-class Animal
-{
+class Animal {
 	protected:
 		std::string type;
-		Brain		*brain;
 
 	public:
 		Animal();
@@ -32,8 +30,6 @@ class Animal
 
 		std::string		getType() const;
 		virtual void	makeSound() const = 0;
-		Brain			*getBrain() const;
-		void			setBrain(Brain *brain);
 };
 
 #endif

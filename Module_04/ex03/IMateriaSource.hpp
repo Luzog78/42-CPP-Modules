@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 10:26:33 by ysabik            #+#    #+#             */
-/*   Updated: 2024/02/22 10:43:10 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/15 09:50:41 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@
 
 # define SOURCE_SIZE 4
 
-class IMateriaSource
-{
+class IMateriaSource {
 	public:
 		virtual ~IMateriaSource() {}
 

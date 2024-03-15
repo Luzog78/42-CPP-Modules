@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 10:12:31 by ysabik            #+#    #+#             */
-/*   Updated: 2024/02/22 10:14:52 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/15 09:50:48 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 # include "AMateria.hpp"
 
-class Ice : public AMateria
-{
+class Ice : public AMateria {
 	public:
 		Ice();
 		Ice(Ice const &src);

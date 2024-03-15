@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 10:19:13 by ysabik            #+#    #+#             */
-/*   Updated: 2024/02/22 10:42:17 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/15 09:51:23 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 # include "ICharacter.hpp"
 # include "AMateria.hpp"
 
-class Character : public ICharacter
-{
+class Character : public ICharacter {
 	private:
 		std::string		name;
 		AMateria		*inventory[INVENTORY_SIZE];

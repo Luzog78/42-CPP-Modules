@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 17:28:21 by ysabik            #+#    #+#             */
-/*   Updated: 2024/02/20 18:50:47 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/15 09:44:26 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 # include "include.hpp"
 
-class Brain
-{
+class Brain {
 	private:
 		std::string	ideas[100];
 
