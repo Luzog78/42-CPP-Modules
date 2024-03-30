@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 11:01:20 by ysabik            #+#    #+#             */
-/*   Updated: 2024/03/29 06:30:13 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/30 05:20:54 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 
 class Bureaucrat;
 
-class Form
-{
+class Form {
 	private:
 		const std::string	name;
 		const int			signRequirement;

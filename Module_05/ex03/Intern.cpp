@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 06:30:55 by ysabik            #+#    #+#             */
-/*   Updated: 2024/03/29 07:12:00 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/30 04:51:50 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,22 +28,25 @@ Intern	&Intern::operator=(const Intern &rhs) {
 }
 
 AForm	*Intern::makeForm(const std::string formName, const std::string target) {
-	std::map<std::string, AForm*>	map;
-
-	map["shrubbery creation"] = new ShrubberyCreationForm(target);
-	map["robotomy request"] = new RobotomyRequestForm(target);
-	map["presidential pardon"] = new PresidentialPardonForm(target);
+	std::string	requests[] = {
+		"shrubbery creation",
+		"robotomy request",
+		"presidential pardon"
+	};
+	
+	AForm	*forms[] = {
+		new ShrubberyCreationForm(target),
+		new RobotomyRequestForm(target),
+		new PresidentialPardonForm(target)
+	};
 
 	AForm	*ret = 0;
 
-	std::map<std::string, AForm*>::iterator it = map.begin();
-	while (it != map.end()) {
-		if (it->first == formName)
-			ret = it->second;
+	for (int i = 0; i < 3; i++)
+		if (formName == requests[i])
+			ret = forms[i];
 		else
-			delete it->second;
-		it++;
-	}
+			delete forms[i];
 	
 	if (ret)
 		std::cout	<< "Intern creates " << target << std::endl;

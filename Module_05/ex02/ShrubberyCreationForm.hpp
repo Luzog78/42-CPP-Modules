@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 05:20:55 by ysabik            #+#    #+#             */
-/*   Updated: 2024/03/29 05:30:08 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/30 05:20:44 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 
 # include <fstream>
 
-class ShrubberyCreationForm : public AForm
-{
+class ShrubberyCreationForm : public AForm {
 	private:
 		const std::string	target;
 

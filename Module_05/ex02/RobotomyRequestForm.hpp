@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 05:15:37 by ysabik            #+#    #+#             */
-/*   Updated: 2024/03/29 06:20:32 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/30 05:20:39 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@
 # include <cstdlib>
 # include <ctime>
 
-class RobotomyRequestForm : public AForm
-{
+class RobotomyRequestForm : public AForm {
 	private:
 		const std::string	target;
 

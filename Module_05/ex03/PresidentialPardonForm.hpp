@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 05:10:20 by ysabik            #+#    #+#             */
-/*   Updated: 2024/03/29 05:11:22 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/03/30 05:20:11 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 # include "AForm.hpp"
 
-class PresidentialPardonForm : public AForm
-{
+class PresidentialPardonForm : public AForm {
 	private:
 		const std::string	target;
 
