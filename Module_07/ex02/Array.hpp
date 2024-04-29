@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 06:18:25 by ysabik            #+#    #+#             */
-/*   Updated: 2024/03/30 06:40:05 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/04/29 14:15:47 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Array {
 				array[i] = T();
 		}
 
-		Array(Array const &src) {
+		Array(Array const &src) : array(0), _size(0) {
 			*this = src;
 		}
 		
@@ -41,7 +41,8 @@ class Array {
 
 		Array	&operator=(Array const &src) {
 			if (this != &src) {
-				delete[] array;
+				if (_size)
+					delete[] array;
 				_size = src._size;
 				array = new T[_size];
 				for (size_t i = 0; i < _size; i++)
