@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 01:44:22 by ysabik            #+#    #+#             */
-/*   Updated: 2024/03/30 05:19:29 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/04/29 05:42:41 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,13 @@ enum Pseudo {
 };
 
 class ScalarConverter {
-	public:
+	private:
 		ScalarConverter();
 		ScalarConverter(const ScalarConverter &src);
-		virtual ~ScalarConverter() = 0;
-		virtual ScalarConverter	&operator=(const ScalarConverter &rhs) = 0;
+		~ScalarConverter();
+		ScalarConverter	&operator=(const ScalarConverter &rhs);
 
+	public:
 		static void	convert(std::string input);
 };
 

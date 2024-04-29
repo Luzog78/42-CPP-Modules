@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 10:21:30 by ysabik            #+#    #+#             */
-/*   Updated: 2024/03/30 05:10:01 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/04/29 05:31:02 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main() {
 	std::cout << "  quux: " << data.quux << std::endl;
 	std::cout << std::endl;
 
-	uintptr_t	*raw = Serializer::serialize(&data);
+	uintptr_t	raw = Serializer::serialize(&data);
 
 	std::cout << "Raw: " << raw << std::endl;
 	std::cout << std::endl;
