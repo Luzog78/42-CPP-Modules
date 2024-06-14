@@ -6,7 +6,7 @@
 /*   By: ysabik <ysabik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 07:34:03 by ysabik            #+#    #+#             */
-/*   Updated: 2024/01/12 10:50:00 by ysabik           ###   ########.fr       */
+/*   Updated: 2024/06/14 22:58:38 by ysabik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,19 +57,13 @@ void	Harl::complain(std::string level) const {
 	switch (i) {
 		case 0:
 			this->debug();
-			this->info();
-			this->warning();
-			this->error();
-			break ;
+			/* fallthrough */
 		case 1:
 			this->info();
-			this->warning();
-			this->error();
-			break ;
+			/* fallthrough */
 		case 2:
 			this->warning();
-			this->error();
-			break ;
+			/* fallthrough */
 		case 3:
 			this->error();
 			break ;
